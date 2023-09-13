@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Veg Plate Receipe",
+    "desc": "Green Chilly, Rice and more",
+    "img": "/Assest/veg-plate.png"
+  },
+  {
+    "name": "Bread Toast Receipe",
+    "desc": "Honey, Nuts, cookie and more",
+    "img": "/Assest/bread-toast.png"
+  },
+  {
+    "name": "Strawberry Shake",
+    "desc": "Condence Milk, Fruits etc.",
+    "img": "/Assest/strawberry-shake.png"
+  },
+  {
+    "name": "Sweet Jelly ",
+    "desc": "Toast Bread, Cream, choco etc.",
+    "img": "/Assest/sweet-jelly.png"
+  },
+  {
+    "name": "Donuts Receipe",
+    "desc": "Double Brown Bread etc.",
+    "img": "/Assest/donut.png"
+  },
+  {
+    "name": "Eggs Pasta Receipe",
+    "desc": "Eggs, Cauliflower, Bread etc",
+    "img": "/Assest/egg-pasta.png"
+  },
+  {
+    "name": "Pizza Receipe",
+    "desc": "pizza which you cannot stop eating.",
+    "img": "/Assest/pizza.png"
+  },
+  {
+    "name": "Butter Bread Receipe",
+    "desc": "Fresh Breads, Butter, Cheese etc",
+    "img": "/Assest/butter-on-bread.png"
+  },
+  {
+    "name": "Creamy Strawberry",
+    "desc": "Strawberry, Milk cream etc",
+    "img": "/Assest/creamy.png"
+  },
+  {
+    "name": "Dora Cakes Receipe",
+    "desc": "Pan, Choco, Breads Cutter etc",
+    "img": "/Assest/dora-cake.png"
+  }
+]

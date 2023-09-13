@@ -1,0 +1,562 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryColour: #023047;
+    --black: #1B2028;
+}
+
+body {
+    position: relative;
+}
+
+#wrapper {
+    background-color: #e5e5e5;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.post-details-container:nth-child(even) {
+    display: none;
+}
+
+.postdetails {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1B2028;
+}
+
+.mobilemenu_result {
+    position: absolute;
+
+    background-color: var(--primaryColour);
+    width: 80%;
+    top: 100%;
+    display: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.mobilemenu_result ul li {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.mobilemenu_result li:hover {
+    background-color: var(--black);
+}
+
+.mobilemenu_result a {
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+    font-family: 'Times New Roman';
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: white;
+    padding: 12px 20px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--black);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: orange;
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width: 870px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: #e5e5e5;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
+
+/* header ends here */
+
+.main {
+    padding: 60px 10%;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 600px 1fr;
+    justify-content: space-between;
+}
+
+.receipeMan-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 30px;
+    justify-content: center;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-weight: 1000;
+    gap: 5px;
+}
+
+.box {
+    background-color: green;
+}
+
+.receipeMan-image img {
+
+    height: 60%;
+}
+
+.footer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10%;
+    bottom: 0;
+    color: white;
+    background-color: var(--primaryColour);
+}
+
+.ft1 {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColour);
+}
+
+.ft-logo img {
+    height: 50px;
+}
+
+.follow-us h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.follow-us a {
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--black);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer-svg {
+    position: relative;
+    bottom: -5px;
+}
+
+.about-section {
+    width: 80%;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+
+.fa-brands {
+    color: white;
+}
+
+.fa-facebook:hover {
+    color: rgb(45, 45, 236);
+}
+
+.fa-instagram:hover {
+    color: rgb(238, 24, 60);
+}
+
+.fa-square-x-twitter:hover {
+    color: blue;
+}
+
+.recipe-item:hover {
+    scale: 1.02;
+    transform: translateY(-5px);
+}
+
+.recipe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #d2dae2;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#data-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 12px;
+    row-gap: 10px;
+}
+
+.recipe-item h2 {
+    color: #485460;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.recipe-item p {
+    color: #485460;
+    padding-top: 4px;
+    font-size: 13px;
+}
+
+.post-details-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 10px #FF6F00, -2px -2px 10px #FF6F00;
+    gap: 30px;
+}
+
+.addProductPage {
+    position: absolute;
+    height: 100vh;
+    background-color: #1B2028;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#addpd-visible {
+    display: block;
+}
+
+#addpd {
+    padding: 20px;
+    color: white;
+    background-color: #1B2028;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px red, -2px -2px 2px red;
+}
+
+.addProduct {
+    background-color: var(--primaryColour);
+    padding: 2px 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+
+.fa-plus {
+    font-size: 25px;
+}
+
+.addProduct:hover i {
+    transform: rotate(180deg);
+    transition: .8s ease-in-out;
+}
+
+.receipe-item {
+    position: relative;
+}
+
+.cancel {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: red;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+    padding: 1px;
+}
+
+.mobilemenu {
+    display: none;
+}
+
+
+/* contact us page */
+/* contact us */
+/* Style inputs */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .column,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1190px) {
+
+    .main {
+        padding: 60px 10%;
+        display: grid;
+        gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width : 924px) {
+
+    .mobilemenu {
+        display: block;
+        background-color: var(--primaryColour);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width : 678px) {
+    #data-container {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        column-gap: 12px;
+        row-gap: 10px;
+    }
+}
+
+@media screen and (max-width : 668px) {
+    #data-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
+        row-gap: 10px;
+    }
+
+    .recipe-item {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width : 556px) {
+    #data-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        justify-content: center;
+    }
+
+    .recipe-item {
+        width: 300px;
+    }
+
+    .mobilemenu span {
+        display: none;
+    }
+
+    .ft1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primaryColour);
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .ft1 h2 {
+        text-align: center;
+        background-color: var(--black);
+        border-radius: 10px;
+        padding: 5px 2px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .receipeMan-image img {
+        height: 250px;
+    }
+
+    .post-details-container {
+        width: 80%;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.receipeMan-image img {
+    height: 200px;
+}
+
+.post-details-container {
+    width: 80%;
+}
+
+.mobilemenu {
+    margin-right: 10px;
+}
+
+.addProduct {
+    margin-left: 5px;
+}
